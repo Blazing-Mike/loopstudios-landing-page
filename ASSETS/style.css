@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --primary-gray: hsl(0, 0%, 55%);
+  --secondary-gray: hsl(0, 0%, 41%);
+  --spacing: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+body {
+  font-size: 15px;
+  font-family: "Alata", sans-serif;
+}
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-family: "Josefin Sans", sans-serif;
+}
+.para {
+  font-size: 1rem;
+  font-family: "Alata", sans-serif;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+.desktop {
+  display: none;
+}
+.big-heading {
+  font-size: 1.7rem;
+  width: 130px;
+  color: var(--white);
+  font-weight: 100;
+}
+
+/* button */
+.btn__primary {
+  background: var(--white);
+  border: 2px solid var(--black);
+  padding: 8px;
+  width: 8rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  margin: 1rem 30%;
+  font-family: "Alata", sans-serif;
+}
+.btn__primary:hover {
+  background: var(--black);
+  color: var(--white);
+}
+main {
+  margin: 3rem 5%;
+}
+/* HEADING/HERO*/
+.hero {
+  background: url("/images/mobile/image-hero.jpg") no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+.sub-hero {
+  margin: 0 5%;
+  margin-top: 100px;
+  border: 2px solid var(--white);
+  text-align: left;
+  padding: 10px;
+  width: 280px;
+}
+
+/* NAVBAR */
+.Navbar {
+  padding: 0 20px;
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Navbar__items {
+  display: none;
+  transition: 0.4s ease-in-out;
+}
+.logo {
+  width: 12rem;
+}
+.Navbar__logo {
+  z-index: 8;
+}
+.Navbar__link {
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 20px;
+  font-weight: lighter;
+  max-width: 40%;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.Navbar__link:hover {
+  border-bottom: 2px solid var(--white);
+}
+.Navbar__ToggleShow {
+  position: absolute;
+  display: flex;
+  background: var(--black);
+  flex-direction: column;
+  color: var(--white);
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding-top: 200px;
+  height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  transition: 0.4s ease-in-out;
+}
+
+.Navbar__link-toggle {
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+  z-index: 5;
+  display: inline-block;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: var(--white);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* INTRO */
+
+.intro {
+  text-align: center;
+}
+.intro__text {
+  margin-top: 1rem;
+  padding: 3px;
+  background: var(--white);
+  max-width: 25rem;
+}
+.intro__text-heading {
+  font-size: 1.7rem;
+}
+.intro__text-para {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  color: var(--secondary-gray);
+}
+
+/* FEATURES SECTION */
+.wrapper-features {
+  margin-bottom: 5rem;
+}
+.features-section {
+  margin-bottom: 3rem;
+}
+.feature {
+  margin: 0.7rem 0;
+}
+.features-image {
+  transition: 0.3s ease-in;
+}
+.feature:hover .features-image {
+  opacity: 0.5;
+  transform: scale(1.02);
+}
+.feature:hover .features-text {
+  color: var(--secondary-gray);
+}
+.features-text {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  position: absolute;
+  margin-top: -5rem;
+  color: var(--white);
+  font-weight: 400;
+  width: 150px;
+  padding-left: 15px;
+}
+
+.features__heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background: var(--black);
+  padding: var(--spacing) 10px;
+  color: var(--white);
+}
+
+footer .Navbar__link {
+  color: var(--white);
+  font-size: 1rem;
+  display: block;
+  line-height: 2;
+  max-width: 100%;
+  font-family: "Alata", sans-serif;
+  text-transform: capitalize;
+  padding: 10px 0;
+}
+footer .Navbar__link:hover {
+  border: none;
+}
+.footer__icons {
+  margin: var(--spacing) 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.footer-text {
+  margin: 1rem 0;
+}
+
+.icons {
+  padding-bottom: 5px;
+}
+.icons:hover {
+  border-bottom: 2px solid white;
+}
