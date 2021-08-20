@@ -252,6 +252,7 @@ footer .Navbar__link:hover {
 
 .icons {
   padding-bottom: 5px;
+   width: 1.1rem;
 }
 .icons:hover {
   border-bottom: 2px solid white;
